@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HL7 Message Generator - SmaRTy Saini Corp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>HL7 Message Generator</h1>
+    <p>Select message type and fill in details:</p>
+
+    <label>Message Type:
+        <select id="messageType">
+            <option value="ADT^A01">ADT^A01 (Admit)</option>
+            <option value="ORM^O01">ORM^O01 (Order)</option>
+        </select>
+    </label><br><br>
+
+    <label>Patient First Name: <input type="text" id="firstName" value="John"></label><br>
+    <label>Patient Last Name: <input type="text" id="lastName" value="Doe"></label><br>
+    <label>Patient MRN: <input type="text" id="mrn" value="123456"></label><br>
+    <label>Date of Birth (YYYYMMDD): <input type="text" id="dob" value="19800101"></label><br>
+    <label>Sex (M/F): <input type="text" id="sex" value="M"></label><br><br>
+
+    <button onclick="generateHL7()">Generate Message</button>
+
+    <h3>Generated HL7 Message:</h3>
+    <textarea id="hl7Output" readonly></textarea>
+
+    <script src="script.js"></script>
+</body>
+</html>
